@@ -1,0 +1,9 @@
+<h1>This is the countries page</h1>
+
+<% if @countries.any? %>
+  <ul>
+  <% @countries.each do |country| %>
+    <li> <%= country %> </li>
+    <% end %>
+  </ul>
+  <% end %>
