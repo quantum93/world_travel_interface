@@ -10,7 +10,9 @@
 <br>
 <%= @most_satisfied_country[0]["reviews_rating"] %>
 
-<h2>All country you can travel in the world</h2>
+<h2>Try this unexpected destination!</h2>
+<%= link_to "Your next destination", random_path %>
+<h2>The list of all country you can travel in the world</h2>
 <% if @countries.any? %>
   <ul>
   <% @countries.each do |country| %>
