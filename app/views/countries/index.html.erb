@@ -1,5 +1,16 @@
-<h1>This is the countries page</h1>
+<h1>This is the destination for your world travel</h1>
 
+<h2>The most reviewd country information</h2>
+<%= @most_reviewed_country[0]["name"] %>
+<br>
+<%= @most_reviewed_country[0]["reviews_count"] %>
+
+<h2>The most satisfied destination for world travel</h2>
+<%= @most_satisfied_country[0]["name"] %>
+<br>
+<%= @most_satisfied_country[0]["reviews_rating"] %>
+
+<h2>All country you can travel in the world</h2>
 <% if @countries.any? %>
   <ul>
   <% @countries.each do |country| %>
