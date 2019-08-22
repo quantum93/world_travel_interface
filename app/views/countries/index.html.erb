@@ -1,22 +1,58 @@
 <h1>This is the destination for your world travel</h1>
 
-<h2>The most reviewd country information</h2>
-<%= @most_reviewed_country[0]["name"] %>
-<br>
-<%= @most_reviewed_country[0]["reviews_count"] %>
+<div class="row">
+    <div class="col-md-4">
+      <div class="card text-white bg-warning mb-3">
+        <div class="card-header">
+          <h3>The most reviewd country information</h3>
+        </div>
+        <div class="card-body">
+          <h3><%= @most_reviewed_country[0]["name"] %></h3>
+          Reviews: <%= @most_reviewed_country[0]["reviews_count"] %>
+        </div>
+      </div>
+    </div>
 
-<h2>The most satisfied destination for world travel</h2>
-<%= @most_satisfied_country[0]["name"] %>
-<br>
-<%= @most_satisfied_country[0]["reviews_rating"] %>
+    <div class="col-md-4">
+      <div class="card text-white bg-warning mb-3">
+        <div class="card-header">
+          <h3>The most satisfied destination for world travel</h3>
+        </div>
+        <div class="card-body">
+          <h3><%= @most_satisfied_country[0]["name"] %></h3>
+          Rating Average: <%= @most_satisfied_country[0]["reviews_rating"] %>
+        </div>
+      </div>
+    </div>
 
-<h2>Try this unexpected destination!</h2>
-<%= link_to "Your next destination", random_path %>
-<h2>The list of all country you can travel in the world</h2>
+    <div class="col-md-4">
+      <div class="card text-white bg-warning mb-3">
+        <div class="card-header">
+          <h3>Try this unexpected destination!</h3>
+        </div>
+        <div class="card-body">
+          <%= link_to "Your next destination", random_path %>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<h3>The list of all country you can travel in the world</h3>
 <% if @countries.any? %>
-  <ul>
+<div class="row">
+
   <% @countries.each do |country| %>
-    <li> <%= link_to "#{country[0]["name"]}", country_path(country[0]["id"]) %></li>
-    <% end %>
-  </ul>
+      <div class="col-md-4">
+         <%= link_to "#{country[0]["name"]}", country_path(country[0]["id"]) %>
+      </div>
+      <% end %>
+
+</div>
   <% end %>

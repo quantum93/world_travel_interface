@@ -2,10 +2,11 @@
 <br>
 
 <% @country[1].each do |review| %>
-  <%= review["user_name"] %>
+  Traveler: <%= review["user_name"] %>
   <br>
-  <%= review["rating"] %>
+  Rating: <%= review["rating"] %>
   <br>
-  <%= review["content"] %>
+  Review: <%= review["content"] %>
+  <br>
   <br>
 <% end %>
