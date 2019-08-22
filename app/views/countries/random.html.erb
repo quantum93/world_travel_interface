@@ -1,5 +1,10 @@
 <h1>This is suggested country for you!</h1>
 <h2><%= @country[0][0]["name"] %></h2>
+<br>
+about this country: <a href='https://en.wikipedia.org/wiki/<%= @country[0][0]["name"] %>'>Here</a>
+<br>
+<br>
+
 <% @country[1].each do |review| %>
 Traveler: <%= review["user_name"] %>
 <br>
