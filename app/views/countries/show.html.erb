@@ -1,6 +1,6 @@
-<h1>This is suggested country for you!</h1>
-<%= @country[0][0]["name"] %>
+<h1><%= @country[0]["name"] %></h1>
 <br>
+
 <% @country[1].each do |review| %>
   <%= review["user_name"] %>
   <br>

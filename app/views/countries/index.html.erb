@@ -16,7 +16,7 @@
 <% if @countries.any? %>
   <ul>
   <% @countries.each do |country| %>
-    <li> <%= country %> </li>
+    <li> <%= link_to "#{country[0]["name"]}", country_path(country[0]["id"]) %></li>
     <% end %>
   </ul>
   <% end %>

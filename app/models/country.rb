@@ -1,7 +1,12 @@
 class Country
 
+  def self.get_country(id)
+    response = RestClient.get("localhost:3001/v1/countries/#{id}")
+    @country = JSON.parse(response)
+  end
+
   def self.get_countries
-    response = RestClient.get('localhost:3001/v1/countries')
+    response = RestClient.get('localhost:3001/v1/all_countries')
     @countries = JSON.parse(response)
   end
 
