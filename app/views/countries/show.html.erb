@@ -1,13 +1,14 @@
 <h1><%= @country[0]["name"] %></h1>
 <br>
 about this country: <a href='https://en.wikipedia.org/wiki/<%= @country[0]["name"] %>'>Here</a>
+
 <br>
 <% @country[1].each do |review| %>
-  Traveler: <%= review["user_name"] %>
-  <br>
-  Rating: <%= review["rating"] %>
-  <br>
-  Review: <%= review["content"] %>
-  <br>
-  <br>
+Traveler: <%= review["user_name"] %>
+<br>
+Rating: <%= review["rating"] %>
+<br>
+Review: <%= review["content"] %>
+<br>
+<br>
 <% end %>
