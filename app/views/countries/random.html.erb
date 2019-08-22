@@ -1,16 +1,19 @@
-<h1>This is suggested country for you!</h1>
+<h1 class="text-center">This is suggested country for you!</h1>
+<br>
 <h2><%= @country[0][0]["name"] %></h2>
 <br>
-about this country: <a href='https://en.wikipedia.org/wiki/<%= @country[0][0]["name"] %>'>Here</a>
-<br>
-<br>
+<h3>More info: <a href='https://en.wikipedia.org/wiki/<%= @country[0][0]["name"] %>'>Wikipedia</a></h3>
+
 
 <% @country[1].each do |review| %>
-Traveler: <%= review["user_name"] %>
-<br>
-Rating: <%= review["rating"] %>
-<br>
-Review: <%= review["content"] %>
-<br>
+<div class="card">
+  <div class="card-header">
+    Traveler: <%= review["user_name"] %>
+    <p class="float-right">Rating: <%= review["rating"] %>/10</p>
+  </div>
+  <div class="card-body">
+    Review: <%= review["content"] %>
+  </div>
+</div>
 <br>
 <% end %>
